@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Our Restaraunt</title>
-  <!-- Latest compiled and minified CSS & JS -->
+  
   <link rel="stylesheet"
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet"
@@ -23,7 +23,7 @@
 
   <div class="container">
     <div class="jumbotron">
-      <h1>Farm</h1>
+      <h1>Our Restaurant</h1>
       <h3>Charlotte Restaraunt</h3>
       <hr>
    
@@ -44,52 +44,4 @@
                 <input type="text" class="form-control" id="name">
               </div>
 
-              <div class="form-group">
-                <label for="role">Date</label>
-                <input type="text" class="form-control" id="role">
-              </div>
-
-              <div class="form-group">
-                <label for="age">Time</label>
-                <input type="text" class="form-control" id="age">
-              </div>
-
-            </form>
-            <br>
-            <div class="text-right">
-              <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="fa fa-fire"></span>Make a Reservation</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <script type="text/javascript">
-    // inline javascript
-    $("#add-btn").on("click", function(event) {
-      event.preventDefault();
-      var newReservation = {
-        name: $("#name").val().trim(),
-        role: $("#role").val().trim(),
-        age: $("#age").val().trim(),
-        forcePoints: $("#force-points").val().trim()
-      };
-     
-      $.post("/api/characters", newReservation)
-        .then(function(data) {
-          console.log("add.html", data);
-          alert("Adding character...");
-        });
-    });
-  </script>
-
-</body>
-</html>
-</head>
-
-<body>
-
-</body>
-</html>
+            </html>>
