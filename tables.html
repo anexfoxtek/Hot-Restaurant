@@ -19,21 +19,21 @@
 			<br>
 
 			<div class="text-center">
-				<a href="reserve.html"><button type="button" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-credit-card"></span> Make Reservation</button></a>
-				<a href="index.html"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
+				<a href="/reservations.html"><button type="button" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-credit-card"></span> Make Reservation</button></a>
+				<a href="/index.html"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-lg-12">
 
-				<!-- Current Tables in Use -->
+				<!-- Current taken tables -->
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">Current Reservations</h4>
 					</div>
 					<div class="panel-body" id="tableSection">
-					<div class="well" id="tableWell-01"><h2><span class="label label-primary">1</span> | 245</h2></div><div class="well" id="tableWell-11"><h2><span class="label label-primary">2</span> | 4565</h2></div><div class="well" id="tableWell-21"><h2><span class="label label-primary">3</span> | wdf</h2></div><div class="well" id="tableWell-31"><h2><span class="label label-primary">4</span> | 101</h2></div></div>
+					</div>
 				</div>
 
 				<!-- Waiting List Panel -->
@@ -51,7 +51,7 @@
 	    <footer class="footer">
 	      <div class="container">
 	      	<p>Control Panel</p>
-	        <p><a href="#" id="clear">Clear Table</a> | <a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a></p>
+	        <p><a href="#" id="clear">Clear Table</a> | <a href="/api/tables">API Table Link</a> | <a href="/api/reservations">API Wait List</a></p>
 	      </div>
 	    </footer>
 
@@ -111,12 +111,12 @@
 		var currentURL = window.location.origin;
 
 		// The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
-		$.ajax({url: currentURL + "/api/waitlist", method: "GET"})
+		$.ajax({url: currentURL + "/api/reservations", method: "GET"})
 			.done(function(waitlistData) {
 
 				// Here we are logging the URL so we have access to it for troubleshooting
 				console.log("------------------------------------");
-				console.log("URL: " + currentURL + "/api/waitlist");
+				console.log("URL: " + currentURL + "/reservations");
 				console.log("------------------------------------");
 
 				// Here we then log the NYTData to console, where it will show up as an object.

@@ -19,8 +19,8 @@
 			<br>
 
 			<div class="text-center">
-				<a href="tables.html"><button type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-list-alt"></span> View Tables</button></a>
-				<a href="index.html"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
+				<a href="/tables.html"><button type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-list-alt"></span> View Tables</button></a>
+				<a href="/index.html"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
 			</div>
 		</div>
 
@@ -68,7 +68,7 @@
 
 	    <footer class="footer">
 	      <div class="container">
-	        <p><a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a> </p>
+	        <p><a href="/api/tables">API Table Link</a> | <a href="/api/reservations">API Wait List</a> </p>
 	      </div>
 	    </footer>
 
@@ -111,7 +111,7 @@
 
 	    	// If a table is available... tell user they are booked.
 	    	if(data == true){
-	    		alert("Yay! You are officially booked!")
+	    		alert("Good job! You are booked!")
 	    	}
 
 	    	// If a table is available... tell user they on the waiting list.
@@ -123,7 +123,8 @@
     		$('#reserve_name').val("");
 			$('#reserve_phone').val("");
 			$('#reserve_email').val("");
-			$('#reserve_uniqueID').val("");
+            $('#reserve_uniqueID').val("");
+            
 
 	    });
 
