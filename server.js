@@ -3,7 +3,7 @@ var path = require("path");
 var fs = require("fs");
 
 var app = express();
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -47,6 +47,6 @@ app.post("/api/tables", function(req, res) {
     }    
 });
 
-app.listen(process.env.PORT || 3000, function() {
+app.listen(PORT, function() {
     console.log("App listening");
 });
